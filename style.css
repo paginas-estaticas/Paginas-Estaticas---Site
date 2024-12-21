@@ -1,0 +1,213 @@
+:root {
+    --strongColor: #001f3f;
+    --whiteColor: #ffffff;
+    --blackColor: #000000;
+    --greyColor: #3b3b3b;
+    --primaryFont: "Oswald", sans-serif;
+    --secondaryFont: "Arial", sans-serif;
+    --smallTitleFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("Fuentes/Oswald/Oswald-VariableFont_wght.ttf") format(truetype);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    all: unset;
+}
+
+button {
+    all: unset;
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: var(--headerFontSize);
+    font-size: var(--headerFontSize);
+    color: var(--strongColor);
+}
+
+body {
+    font-family: var(--secondaryFont);
+    font-size: var(--bodyFontSize);
+    color: var(--greyColor);
+}
+
+.common-padding {
+    max-width: 90rem;
+    padding: 0 4%;
+}
+
+h1, h2, h3, .small-title {
+    font-family: var(--primaryFont);
+    text-transform: uppercase;
+    margin: 1rem auto;
+}
+
+/* */
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 10000;
+    width: 100%;
+    margin: 0 auto;
+    font-family: var(--headerFontSize);
+    font-size: var(--headerFontSize);
+    color: var(--strongColor);
+    align-content: center;
+    box-shadow: 0 -6px 16px var(--blackColor);
+    background-color: var(--whiteColor);
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 0vh;
+    background-color: #00000099;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    top: 0;
+    right: 0;
+    z-index: -11;
+    transform: height 0.3s, opacity 0.3s;
+    transition: opacity 0.3s ease-in-out;
+}
+
+header.active::before {
+    height: 150vh;
+    opacity: 1;
+}
+
+.header-div-top {
+    width: 100%;
+    margin: 0;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    gap: 4vw;
+    align-items: center;
+    height: auto;
+    line-height: 0;
+    background-color: var(--whiteColor);
+}
+
+.header-div-logo-container {
+    max-width: 40%;
+    text-align: left;
+    margin: 0;
+}
+
+.header-div-logo-container img {
+    width: 100%;
+    border-radius: 0;
+}
+
+#hamburguer-menu-icon {
+    max-width: 20%;
+    min-width: 42px;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+#hamburguer-menu-icon.active {
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    max-width: 8vw;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--strongColor);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#hamburguer-menu-icon.active .bar:nth-child(1) {
+    opacity: 0;
+}
+
+#hamburguer-menu-icon.active .bar:nth-child(2) {
+    transform: translateY(4px) rotate(45deg);
+}
+
+#hamburguer-menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+nav {
+    font-size: 1.125rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--whiteColor);
+    top: 0vh;
+    left: 0;
+    gap: 0;
+    z-index: -1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+nav.active {
+    transform: translateY(10%);
+    transition-delay: .2s;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 12vh 0;
+}
+
+nav ul li {
+    font-family: var(--primaryFont);
+    font-size: 1.25rem;
+    color: var(--strongColor);
+    list-style-type: none;
+    cursor: pointer;
+}
+
+main {
+    padding-top: 3rem;
+}
+
+#section-statement {
+    text-align: center;
+    background-color: var(--strongColor);
+}
+
+#section-statement .common-padding {
+    padding: 4rem 4%;
+}
+
+#section-statement h1, 
+#section-statement .small-title {
+    color: var(--whiteColor);
+}
+
+#section-statement h1 {
+    font-size: 2.25rem;
+}
