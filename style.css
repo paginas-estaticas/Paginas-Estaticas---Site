@@ -1,8 +1,10 @@
 :root {
     --strongColor: #001f3f;
+    --secondaryColor: #43b7ff;
     --whiteColor: #ffffff;
     --blackColor: #000000;
-    --greyColor: #3b3b3b;
+    --greyColor: #5e5e5e;
+    --lightGreyColor: #f7f7f7;
     --primaryFont: "Oswald", sans-serif;
     --secondaryFont: "Arial", sans-serif;
     --smallTitleFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -28,6 +30,10 @@ button {
     all: unset;
 }
 
+img {
+    width: 100%;
+}
+
 * {
     margin: 0 auto;
     box-sizing: border-box;
@@ -43,6 +49,7 @@ body {
     font-family: var(--secondaryFont);
     font-size: var(--bodyFontSize);
     color: var(--greyColor);
+    background-color: var(--strongColor);
 }
 
 .common-padding {
@@ -56,6 +63,15 @@ h1, h2, h3, .small-title {
     margin: 1rem auto;
 }
 
+.small-title {
+    font-weight: 600;
+    color: var(--greyColor);
+}
+
+p {
+    line-height: 1.5rem;
+}
+
 /* */
 
 header {
@@ -67,12 +83,11 @@ header {
     z-index: 10000;
     width: 100%;
     margin: 0 auto;
+    padding: 0.5rem;
     font-family: var(--headerFontSize);
     font-size: var(--headerFontSize);
     color: var(--strongColor);
     align-content: center;
-    box-shadow: 0 -6px 16px var(--blackColor);
-    background-color: var(--whiteColor);
 }
 
 header::before {
@@ -96,6 +111,12 @@ header.active::before {
     opacity: 1;
 }
 
+#header-padding {
+    width: 100%;
+    box-shadow: 0 0 16px var(--blackColor);
+    margin: 1rem 0.5rem;
+}
+
 .header-div-top {
     width: 100%;
     margin: 0;
@@ -107,11 +128,11 @@ header.active::before {
     height: auto;
     line-height: 0;
     background-color: var(--whiteColor);
+    border-radius: 8px;
 }
 
 .header-div-logo-container {
-    max-width: 40%;
-    text-align: left;
+    max-width: 50%;
     margin: 0;
 }
 
@@ -196,18 +217,67 @@ main {
 
 #section-statement {
     text-align: center;
+    color: var(--whiteColor);
     background-color: var(--strongColor);
 }
 
 #section-statement .common-padding {
-    padding: 4rem 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 8rem 4% 4rem;
 }
 
-#section-statement h1, 
 #section-statement .small-title {
     color: var(--whiteColor);
 }
 
 #section-statement h1 {
-    font-size: 2.25rem;
+    font-size: 2.375rem;
+    line-height: 3rem;
+    margin: 0.5rem 0 1rem;
+}
+
+#section-statement p {
+    color: var(--whiteColor);
+}
+
+.div-double-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#section-statement .div-double-button-container {
+    padding-top: 2rem;
+}
+
+.call-to-action, .info-button {
+    all: unset;
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    border-radius: 32px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.call-to-action {
+    padding: 0 2rem;
+    color: var(--strongColor);
+    background-color: var(--secondaryColor);
+}
+
+.info-button {
+    padding: 0 1.5rem;
+}
+
+#section-que-hacemos, #section-que-ofrecemos, 
+#section-portafolio {
+    color: var(--blackColor);
+    background-color: var(--whiteColor);
+}
+
+#section-contacto {
+    color: var(--whiteColor);
 }
