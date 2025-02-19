@@ -63,12 +63,38 @@ h1, h2, h3, .small-title {
     margin: 1rem auto;
 }
 
+h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
 .small-title {
+    margin: 1.25rem 0;
     font-weight: 600;
+    letter-spacing: 0.25rem;
+    line-height: 1.5rem;
     color: var(--greyColor);
 }
 
+.small-title + h2, 
+.small-title + h3 {
+    margin-top: 0.75rem;
+}
+
+.alineado-izquierda {
+    text-align: left;
+}
+
+.alineado-derecha {
+    text-align: right;
+}
+
+section {
+    padding: 4rem 0;
+}
+
 p {
+    margin: 1rem 0;
     line-height: 1.5rem;
 }
 
@@ -211,7 +237,24 @@ nav ul li {
     cursor: pointer;
 }
 
-main {
+.fondo-blanco {
+    background-color: var(--whiteColor);
+}
+
+.fondo-blanco h2, .fondo-blanco h3 {
+    color: var(--blackColor);
+}
+
+.fondo-oscuro {
+    color: var(--whiteColor);
+    background-color: var(--strongColor);
+}
+
+.fondo-oscuro h2, .fondo-oscuro h3 {
+    color: var(--whiteColor);
+}
+
+#main-index {
     padding-top: 3rem;
 }
 
@@ -225,7 +268,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 8rem 4% 4rem;
+    padding: 4rem 4% 4rem;
 }
 
 #section-statement .small-title {
@@ -235,7 +278,7 @@ main {
 #section-statement h1 {
     font-size: 2.375rem;
     line-height: 3rem;
-    margin: 0.5rem 0 1rem;
+    margin: 0.75rem 0 1rem;
 }
 
 #section-statement p {
@@ -280,4 +323,79 @@ main {
 
 #section-contacto {
     color: var(--whiteColor);
+}
+
+/* ====================== */
+
+.page-top-div {
+    margin: 0 auto;
+    padding: 10rem 0 3rem;
+    text-align: center;
+    color: var(--whiteColor);
+    background-color: var(--strongColor);
+}
+
+.page-top-div h1 {
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
+
+#ul-contacto-contacto {
+    padding: 1.25rem 0;
+}
+
+.medio-de-contacto {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.medio-de-contacto p {
+    font-size: 1.125rem;
+    font-weight: 900;
+    margin: 1rem 0;
+    color: var(--blackColor);
+}
+
+.medio-de-contacto img {
+    max-width: 1.5rem;
+    height: auto;
+    margin: 0;
+}
+
+#form-contacto form {
+    margin: 1rem 0;
+}
+
+.form-div-campo {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-div-campo label {
+    font-size: var(--bodyFontSize);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-div-campo input {
+    font-family: var(--bodyFontSize);
+    font-size: var(--bodyFontSize);
+    width: 100%;
+    height: 36px;
+    margin-top: 0.5rem;
+}
+
+.form-div-campo textarea {
+    font-family: var(--bodyFontSize);
+    font-size: var(--bodyFontSize);
+    width: 100%;
+    height: 24vh;
+    margin-top: 0.5rem;
+}
+
+#div-form-contacto-boton {
+    text-align: center;
+    margin: 2rem;
 }

@@ -7,14 +7,14 @@
         <meta name="description" content="Diseñamos páginas estáticas para tu negocios">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Páginas Estáticas">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
     </head>
     <body>
         <header>
             <div id="header-padding">
                 <div class="header-div-top">
                     <div class="header-div-logo-container">
-                        <img src="Imagenes/logo-dark-blue.png" alt="logo">
+                        <img src="../Imagenes/logo-dark-blue.png" alt="logo">
                     </div>
                     <div id="hamburguer-menu-icon">
                         <span class="bar"></span>
@@ -24,20 +24,74 @@
                 </div>
                 <nav>
                     <ul>
-                        <li class="nav-li-element"><a href="#">Home</a></li>
-                        <li class="nav-li-element"><a href="#">Conocé</a></li>
+                        <li class="nav-li-element"><a href="../index.html">Home</a></li>
                         <li class="nav-li-element"><a href="#">Soluciones</a></li>
-                        <li class="nav-li-element"><a href="#">Nosotros</a></li>
-                        <li class="nav-li-element"><a href="#">Contacto</a></li>
+                        <li class="nav-li-element"><a href="nosotros.html">Nosotros</a></li>
+                        <li class="nav-li-element"><a href="#">Preguntas Frequentes</a></li>
+                        <li class="nav-li-element"><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <main>
+            <div class="page-top-div">
+                <h1>Contacto</h1>
+            </div>
+            <section id="section-contacto-contacto" class="fondo-blanco">
+                <div class="common-padding">
+                    <div class="text-container">
+                        <h2>Contactanos</h2>
+                        <p>Estamos disponibles para responder tus preguntas y brindarte la asesoría que necesitás en el menor tiempo posible.</p>
+                        <ul id="ul-contacto-contacto">
+                            <li class="medio-de-contacto">
+                                <img src="../Imagenes/Iconos/phone.svg">
+                                <p>
+                                    +54 11 3245-11982
+                                </p>
+                            </li>
+                            <li class="medio-de-contacto">
+                                <img src="../Imagenes/Iconos/mail.svg">
+                                <p>
+                                    contacto@solaris.com.ar
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="form-contacto">
+                        <h3>Envianos un mensaje</h3>
+                        <div class="text-container">
+                            <p class="alineado-izquierda">
+                                Nos encantaría saber de vos. Por favor completa el formulario a continuación y nos comunicaremos dentro de los siguientes 3 días hábiles.
+                            </p>
+                        </div>
+                        <form>
+                            <div class="form-div-campo">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-div-campo">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" placeholder="Tu email">
+                            </div>
+                            <div class="form-div-campo">
+                                <label for="numero-telefonico">Teléfono</label>
+                                <input type="text" name="numero-telefonico" placeholder="Tu número">
+                            </div>
+                            <div class="form-div-campo">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea name="mensaje" placeholder="Escribí tu mensaje..."></textarea>
+                            </div>
+                            <div id="div-contact-form-boton">
+                                <button type="submit" class="call-to-action">Enviar mensaje</button>
+                            </div>
+                        </form>    
+                    </div> 
+                </div>
+            </section>
         </main>
         <footer>
 
         </footer>
-        <script src="Scripts/hamburgerMenu.js"></script>
+        <script src="../Scripts/hamburgerMenu.js"></script>
     </body>
 </html>
