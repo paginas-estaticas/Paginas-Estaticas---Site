@@ -57,10 +57,15 @@ body {
     padding: 0 4%;
 }
 
-h1, h2, h3, .small-title {
+h1, h2, h3, h4, .small-title {
     font-family: var(--primaryFont);
     text-transform: uppercase;
     margin: 1rem auto;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 2.75rem;
 }
 
 h2 {
@@ -69,7 +74,7 @@ h2 {
 }
 
 .small-title {
-    margin: 1.25rem 0;
+    margin: 0;
     font-weight: 600;
     letter-spacing: 0.25rem;
     line-height: 1.5rem;
@@ -78,7 +83,7 @@ h2 {
 
 .small-title + h2, 
 .small-title + h3 {
-    margin-top: 0.75rem;
+    margin-top: 0rem;
 }
 
 .alineado-izquierda {
@@ -241,7 +246,8 @@ nav ul li {
     background-color: var(--whiteColor);
 }
 
-.fondo-blanco h2, .fondo-blanco h3 {
+.fondo-blanco h1, .fondo-blanco h2, 
+.fondo-blanco h3 {
     color: var(--blackColor);
 }
 
@@ -340,6 +346,19 @@ nav ul li {
     font-size: 2.5rem;
 }
 
+#section-soluciones-soluciones section {
+    padding: 0.5rem 0;
+}
+
+#section-soluciones-soluciones ul {
+    list-style-type: inherit;
+    padding: 0 1rem;
+}
+
+#section-soluciones-soluciones ul li {
+    margin: 0.5rem 0;
+}
+
 #ul-contacto-contacto {
     padding: 1.25rem 0;
 }
@@ -347,10 +366,11 @@ nav ul li {
 .medio-de-contacto {
     display: flex;
     justify-content: left;
+    align-items: center;
     gap: 1rem;
 }
 
-.medio-de-contacto p {
+#ul-contacto-contacto .medio-de-contacto p {
     font-size: 1.125rem;
     font-weight: 900;
     margin: 1rem 0;
@@ -398,4 +418,73 @@ nav ul li {
 #div-form-contacto-boton {
     text-align: center;
     margin: 2rem;
+}
+
+footer {
+    color: white;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    cursor: pointer;
+    color: var(--secondaryColor);
+}
+
+#footer-div-top-logo {
+    margin: 0;
+    padding: 1rem 0;
+    max-width: 200px;
+    height: auto;
+    align-self: left;
+    border-radius: 0;
+}
+
+#footer-div-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: left;
+    padding: 1rem 0;
+}
+
+.footer-section {
+    text-align: left;
+    margin: 0;
+}
+
+footer h4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+}
+
+footer ul li {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+footer svg {
+    margin: 0;
+    color: white;
+    fill: white;
+}
+
+footer .medio-de-contacto p {
+    margin: 0;
+    color: white;
+}
+
+footer hr {
+    color: initial;
+}
+
+#footer-p-copyright {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--whiteColor);
+    max-width: none;
+    text-align: center;
+    padding: 1.5rem 0 0;
 }
