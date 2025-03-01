@@ -115,7 +115,6 @@ header {
     z-index: 10000;
     width: 100%;
     margin: 0 auto;
-    padding: 0.5rem;
     font-family: var(--headerFontSize);
     font-size: var(--headerFontSize);
     color: var(--strongColor);
@@ -146,7 +145,11 @@ header.active::before {
 #header-padding {
     width: 100%;
     box-shadow: 0 0 16px var(--blackColor);
-    margin: 1rem 0.5rem;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+header.active #header-padding {
+    box-shadow: none;
 }
 
 .header-div-top {
@@ -160,7 +163,6 @@ header.active::before {
     height: auto;
     line-height: 0;
     background-color: var(--whiteColor);
-    border-radius: 8px;
 }
 
 .header-div-logo-container {
@@ -169,7 +171,7 @@ header.active::before {
 }
 
 .header-div-logo-container img {
-    width: 100%;
+    width: 6rem;
     border-radius: 0;
 }
 
@@ -547,7 +549,7 @@ footer a:hover {
 #footer-div-top-logo {
     margin: 0;
     padding: 1rem 0;
-    max-width: 200px;
+    width: 10rem;
     height: auto;
     align-self: left;
     border-radius: 0;
