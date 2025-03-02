@@ -32,6 +32,11 @@ button {
 
 img {
     width: 100%;
+    height: auto;
+}
+
+.curved-borders {
+    border-radius: 32px;
 }
 
 * {
@@ -240,6 +245,8 @@ nav ul {
 nav ul li {
     font-family: var(--primaryFont);
     font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
     color: var(--strongColor);
     list-style-type: none;
     cursor: pointer;
@@ -463,6 +470,10 @@ nav ul li {
     padding: 0.5rem 0;
 }
 
+#section-soluciones-soluciones img {
+    display: none;
+}
+
 #section-soluciones-soluciones ul {
     list-style-type: inherit;
     padding: 0 1rem;
@@ -533,8 +544,9 @@ nav ul li {
     margin: 2rem;
 }
 
-footer {
+footer, footer p {
     color: white;
+    line-height: 1.25rem;
 }
 
 footer a {
@@ -549,7 +561,7 @@ footer a:hover {
 #footer-div-top-logo {
     margin: 0;
     padding: 1rem 0;
-    width: 10rem;
+    width: 14rem;
     height: auto;
     align-self: left;
     border-radius: 0;
@@ -600,4 +612,215 @@ footer hr {
     max-width: none;
     text-align: center;
     padding: 1.5rem 0 0;
+}
+
+@media (min-width: 992px) {
+    header {
+        background-color: var(--whiteColor);
+        box-shadow: 0 0 16px var(--blackColor);;
+    }
+
+    #header-padding {
+        padding: 1.5rem 10%;
+        max-width: 100rem;
+        display: flex;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    .header-div-top {
+        padding: 0;
+    }
+
+    #hamburguer-menu-icon {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        transform: none;
+        z-index: 1;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3.75rem;
+    }
+
+    h2 {
+        font-size: 2.75rem;
+        max-width: 32ch;
+        line-height: 3.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 3.5rem 0;
+    }
+
+    .call-to-action {
+        padding: 0 4rem;
+    }
+
+    .info-button {
+        padding: 0 3rem;
+    }
+
+    #section-statement .common-padding {
+        flex-direction: row;
+        align-items: center;
+        gap: 8rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    #section-statement h1 {
+        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        line-height: 4.25rem;
+    }
+
+    #section-statement p {
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.75rem;
+    }
+
+    #section-statement .text-container {
+        text-align: left;
+    }
+
+    .div-double-button-container {
+        justify-content: left;
+    }
+
+    #section-que-hacemos .common-padding div:first-child {
+        text-align: center;
+        width: 50%;
+    }
+
+    #que-hacemos-ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    #section-que-hacemos .common-padding div:nth-child(3) {
+        text-align: center;
+    }
+
+    #section-portafolio {
+        background-color: #f7f7f7;
+    }
+
+    #section-portafolio h2 {
+        line-height: 3.875rem;
+        max-width: 20ch;
+    }
+
+    #section-portafolio .common-padding .text-container:first-child {
+        display: flex;
+        align-items: center;
+    }
+
+    #section-portafolio .common-padding .text-container:first-child p {
+        width: 50%;
+        position: relative;
+        padding: 0 2rem;
+    }
+
+    #section-portafolio .common-padding .text-container:first-child p::after {
+        display: block;
+        content: "";
+        order: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 1.5rem 0 0;
+        height: 100%;
+        width: 1px;
+        background-color: var(--greyColor);
+        opacity: 0.2;
+    }
+
+    #portfolio-ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 1.75rem 0;
+    }
+
+    #portfolio-ul li {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #portfolio-ul li:hover {
+        transform: scale(1.02);
+    }
+
+    #portfolio-ul li .text-container {
+        min-height: 210px;
+    }
+
+    #section-contacto .common-padding {
+        max-width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #section-contacto h2 {
+        padding-right: 3.25rem;
+    }
+
+    .page-top-div h1 {
+        font-size: 3.125rem;
+    }
+
+    #section-soluciones-soluciones .common-padding {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 4rem;
+    }
+
+    #section-soluciones-soluciones img {
+        display: block;
+        height: 100%;
+        width: 30rem;
+    }
+
+    #footer-div-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 250px;
+        height: 100%;
+        padding: 1rem 0 3rem;
+    }
+
+    #footer-div-top-logo {
+        max-width: 100%;
+        width: 248px;
+        height: 100%;
+    }
+
+    #footer-p-copyright {
+        font-size: 0.875rem;
+    }
 }
