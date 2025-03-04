@@ -178,6 +178,7 @@ header.active #header-padding {
 .header-div-logo-container img {
     width: 6rem;
     border-radius: 0;
+    cursor: pointer;
 }
 
 #hamburguer-menu-icon {
@@ -304,6 +305,7 @@ nav ul li {
 .div-double-button-container {
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
 #section-statement .div-double-button-container {
@@ -328,6 +330,10 @@ nav ul li {
     background-color: var(--secondaryColor);
 }
 
+.call-to-action:hover {
+    background-color: var(--whiteColor);
+}
+
 .call-to-action-dark {
     padding: 0 2rem;
     color: var(--whiteColor);
@@ -341,6 +347,11 @@ nav ul li {
 
 .info-button {
     padding: 0 1.5rem;
+}
+
+.info-button:hover {
+    color: var(--strongColor);
+    background-color: var(--secondaryColor);
 }
 
 #section-que-hacemos, #section-que-ofrecemos, 
@@ -397,6 +408,10 @@ nav ul li {
 
 .action-link a:hover {
     text-decoration: none;
+}
+
+#section-que-ofrecemos img {
+    display: none;
 }
 
 #que-ofrecemos-ul {
@@ -470,8 +485,9 @@ nav ul li {
     padding: 0.5rem 0;
 }
 
-#section-soluciones-soluciones img {
-    display: none;
+#section-soluciones-soluciones img,
+#section-nosotros-nosotros img {
+    margin-bottom: 1.75rem;
 }
 
 #section-soluciones-soluciones ul {
@@ -547,6 +563,7 @@ nav ul li {
 footer, footer p {
     color: white;
     line-height: 1.25rem;
+    margin-top: 0;
 }
 
 footer a {
@@ -721,6 +738,17 @@ footer hr {
         text-align: center;
     }
 
+    #section-que-ofrecemos .common-padding {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        text-align: left;
+    }
+
+    #section-que-ofrecemos img {
+        display: block;
+    }
+
     #section-portafolio {
         background-color: #f7f7f7;
     }
@@ -799,10 +827,68 @@ footer hr {
         gap: 4rem;
     }
 
-    #section-soluciones-soluciones img {
+    #section-soluciones-soluciones img,
+    #section-nosotros-nosotros img {
         display: block;
         height: 100%;
         width: 30rem;
+    }
+
+    #section-nosotros-nosotros {
+        text-align: left;
+    }
+
+    #section-nosotros-nosotros .common-padding {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    #section-preguntas-frequentes .common-padding .text-container:first-child {
+        text-align: center;
+        width: 50%;
+    }
+
+    #ul-preguntas-frequentes {
+        padding: 2rem 0;
+    }
+
+    #ul-preguntas-frequentes li {
+        margin-bottom: 2.5rem;
+    }
+
+    #section-contacto-contacto .common-padding {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    #section-contacto-contacto .common-padding .text-container:first-child {
+        max-width: 40%;
+    }
+
+    .medio-de-contacto p {
+        font-size: 1.25rem;
+    }
+
+    #section-contacto hr {
+        display: none;
+    }
+
+    #form-contacto {
+        max-width: 42%;
+        background-color: #f7f7f7;
+        border-radius: 16px;
+        padding: 2rem;
+    }
+
+    #footer-div-top {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
     #footer-div-top {
