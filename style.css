@@ -355,7 +355,7 @@ nav ul li {
 }
 
 #section-que-hacemos, #section-que-ofrecemos, 
-#section-portafolio {
+#section-portafolio, #section-paquetes {
     color: var(--blackColor);
     background-color: var(--whiteColor);
 }
@@ -460,6 +460,78 @@ nav ul li {
 #portfolio-ul img {
     margin: 0 auto;
     width: 100%;
+}
+
+.ul-paquetes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.75rem 0;
+}
+
+.li-paquete {
+    width: 100%;
+    min-height: 300px;
+    margin: 0;
+    padding: 2.75rem;
+    background-color: #f7f7f7;
+    border-radius: 16px;
+}
+
+.titulo-paquete {
+    font-family: var(--primaryFont);
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+}
+
+.li-paquete ul {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1.25rem 0;
+    text-align: left;
+    color: var(--greyColor);
+}
+
+.li-paquete ul li {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ul-paquetes svg {
+    margin: 0;
+}
+
+.ul-paquetes svg path {
+    fill: var(--secondaryColor);
+}
+
+.paquete-precio {
+    display: block;
+    font-family: var(--primaryFont);
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 0.5rem 0;
+}
+
+.li-paquete .call-to-action,
+.li-paquete .call-to-action-dark {
+    padding: 0 3.25rem;
+}
+
+#paquete-destacado {
+    color: var(--whiteColor);
+    background-color: var(--strongColor);
+}
+
+#paquete-destacado ul {
+    color: var(--whiteColor);
 }
 
 #section-contacto {
@@ -674,6 +746,11 @@ footer hr {
         line-height: 3.75rem;
     }
 
+    #main-index h2 {
+        font-size: 3rem;
+        line-height: 3.75rem;
+    }
+
     h2 {
         font-size: 2.25rem;
         line-height: 2.75rem;
@@ -801,6 +878,29 @@ footer hr {
 
     #portfolio-ul li .text-container {
         min-height: 210px;
+    }
+
+    #section-paquetes h2 {
+        max-width: 32ch;
+        margin: 0;
+    }
+
+    .ul-paquetes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 6rem;
+    }
+
+    .li-paquete {
+        width: 33%;
+    }
+
+    .titulo-paquete {
+        font-size: 2.125rem;
+    }
+
+    .paquete-precio {
+        font-size: 2.75rem;
     }
 
     #section-contacto .common-padding {
