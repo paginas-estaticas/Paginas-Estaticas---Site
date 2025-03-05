@@ -675,9 +675,8 @@ footer hr {
     }
 
     h2 {
-        font-size: 2.75rem;
-        max-width: 32ch;
-        line-height: 3.5rem;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
     }
 
     h3 {
@@ -828,7 +827,8 @@ footer hr {
     }
 
     #section-soluciones-soluciones img,
-    #section-nosotros-nosotros img {
+    #section-nosotros-nosotros img,
+    #section-que-ofrecemos img {
         display: block;
         height: 100%;
         width: 30rem;
