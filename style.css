@@ -583,6 +583,20 @@ nav ul li {
     margin: 0.5rem 0;
 }
 
+#ul-preguntas-frequentes {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 1rem;
+}
+
+#ul-preguntas-frequentes li {
+    background-color: var(--lightGreyColor);
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 16px;
+}
+
 #ul-contacto-contacto {
     padding: 1.25rem 0;
 }
@@ -963,10 +977,6 @@ footer hr {
 
     #ul-preguntas-frequentes {
         padding: 2rem 0;
-    }
-
-    #ul-preguntas-frequentes li {
-        margin-bottom: 2.5rem;
     }
 
     #section-contacto-contacto .common-padding {
