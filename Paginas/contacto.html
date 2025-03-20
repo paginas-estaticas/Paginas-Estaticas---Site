@@ -67,7 +67,7 @@
                                 Nos encantaría saber de vos. Por favor completa el formulario a continuación y nos comunicaremos dentro de los siguientes 3 días hábiles.
                             </p>
                         </div>
-                        <form name="contacto" method="POST" data-netlify="true">
+                        <form name="contacto" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                             <div class="form-div-campo">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" name="nombre" placeholder="Tu nombre">
@@ -84,6 +84,7 @@
                                 <label for="mensaje">Mensaje</label>
                                 <textarea name="mensaje" placeholder="Escribí tu mensaje..."></textarea>
                             </div>
+                            <div data-netlify-recaptcha="true"></div>
                             <div id="div-contact-form-boton">
                                 <button type="submit" class="call-to-action">Enviar mensaje</button>
                             </div>
