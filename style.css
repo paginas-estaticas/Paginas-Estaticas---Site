@@ -653,6 +653,10 @@ nav ul li {
     margin-top: 0.5rem;
 }
 
+#recaptcha-div {
+    margin: 1rem auto;
+}
+
 #div-form-contacto-boton {
     text-align: center;
     margin: 2rem;
@@ -1004,6 +1008,10 @@ footer hr {
         background-color: #f7f7f7;
         border-radius: 16px;
         padding: 2rem;
+    }
+
+    #recaptcha-div {
+        margin: 1rem 0;
     }
 
     #footer-div-top {
