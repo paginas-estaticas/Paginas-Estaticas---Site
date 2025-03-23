@@ -62,7 +62,7 @@ body {
     padding: 0 4%;
 }
 
-h1, h2, h3, h4, .small-title {
+h1, h2, h3,.header-footer, .small-title {
     font-family: var(--primaryFont);
     text-transform: uppercase;
     margin: 1rem auto;
@@ -176,7 +176,7 @@ header.active #header-padding {
 }
 
 .header-div-logo-container img {
-    width: 6rem;
+    width: 96px;
     border-radius: 0;
     cursor: pointer;
 }
@@ -699,7 +699,7 @@ footer a:hover {
     margin: 0;
 }
 
-footer h4 {
+.header-footer {
     font-size: 1.375rem;
     line-height: 2rem;
 }
@@ -806,8 +806,8 @@ footer hr {
         flex-direction: row;
         align-items: center;
         gap: 8rem;
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     #section-statement h1 {
@@ -822,6 +822,10 @@ footer hr {
 
     #section-statement .text-container {
         text-align: left;
+    }
+
+    #responsive-design-image-top {
+        width: 560px;
     }
 
     .div-double-button-container {
@@ -897,6 +901,10 @@ footer hr {
         gap: 2rem;
         padding: 1.75rem 0;
     }
+    
+    #portfolio-ul img {
+        width: 400px;
+    }
 
     #portfolio-ul li {
         transition: transform 0.3s ease-in-out;
@@ -953,15 +961,15 @@ footer hr {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: flex-start;
         gap: 4rem;
     }
 
     #section-soluciones-soluciones img,
     #section-nosotros-nosotros img,
     #section-que-ofrecemos img {
-        display: block;
-        height: 100%;
-        width: 30rem;
+        width: 480px;
+        max-height: 100%;
     }
 
     #section-nosotros-nosotros {
