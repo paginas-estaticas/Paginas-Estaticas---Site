@@ -176,9 +176,9 @@ header.active #header-padding {
 }
 
 .header-div-logo-container img {
-    width: 96px;
     border-radius: 0;
     cursor: pointer;
+    width: 96px;
 }
 
 #hamburguer-menu-icon {
@@ -680,8 +680,7 @@ footer a:hover {
 #footer-div-top-logo {
     margin: 0;
     padding: 1rem 0;
-    width: 14rem;
-    height: auto;
+    width: 248px;
     align-self: left;
     border-radius: 0;
 }
@@ -749,6 +748,10 @@ footer hr {
 
     .header-div-top {
         padding: 0;
+    }
+
+    .header-div-logo-container img {
+        width: 6rem;
     }
 
     #hamburguer-menu-icon {
@@ -1039,9 +1042,7 @@ footer hr {
     }
 
     #footer-div-top-logo {
-        max-width: 100%;
         width: 248px;
-        height: 100%;
     }
 
     #footer-p-copyright {
