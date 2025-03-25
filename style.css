@@ -662,6 +662,10 @@ nav ul li {
     margin: 2rem;
 }
 
+footer {
+    padding-top: 2rem;
+}
+
 footer, footer p {
     color: white;
     line-height: 1.25rem;
@@ -1025,6 +1029,10 @@ footer hr {
         margin: 1rem 0;
     }
 
+    footer {
+        padding-top: 4rem;
+    }
+
     #footer-div-top {
         display: flex;
         flex-direction: row;
@@ -1043,6 +1051,7 @@ footer hr {
 
     #footer-div-top-logo {
         width: 248px;
+        padding-top: 0;
     }
 
     #footer-p-copyright {

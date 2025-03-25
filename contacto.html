@@ -7,8 +7,8 @@
         <meta name="description" content="Diseñamos páginas estáticas para tu negocios">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Páginas Estáticas">
-        <link rel="stylesheet" href="../style.css">
-        <link rel="icon" href="../Imagenes/Logo/icon-medium.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="Imagenes/Logo/icon-medium.ico" type="image/x-icon">
     </head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5L9CVRYBG"></script>
     <script>
@@ -23,8 +23,8 @@
             <div id="header-padding">
                 <div class="header-div-top">
                     <div class="header-div-logo-container">
-                        <a href="../index.html">
-                            <img src="../Imagenes/Logo/logo-paginas-estaticas-color-2.webp" alt="Logo de Páginas Estáticas Diseño Web" width="96" height="42">
+                        <a href="index.html">
+                            <img src="Imagenes/Logo/logo-paginas-estaticas-color-2.webp" alt="Logo de Páginas Estáticas Diseño Web" width="96" height="42">
                         </a>
                     </div>
                     <div id="hamburguer-menu-icon">
@@ -35,7 +35,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <li class="nav-li-element"><a href="../index.html">Home</a></li>
+                        <li class="nav-li-element"><a href="index.html">Home</a></li>
                         <li class="nav-li-element"><a href="servicios.html">Servicios</a></li>
                         <li class="nav-li-element"><a href="nosotros.html">Nosotros</a></li>
                         <li class="nav-li-element"><a href="faq.html">Preguntas Frequentes</a></li>
@@ -46,49 +46,58 @@
         </header>
         <main>
             <div class="page-top-div">
-                <h1>Preguntas Frequentes</h1>
+                <h1>Contacto</h1>
             </div>
-            <section id="section-preguntas-frequentes" class="fondo-blanco">
+            <section id="section-contacto-contacto" class="fondo-blanco">
                 <div class="common-padding">
                     <div class="text-container">
-                        <div class="small-title">Preguntas Frequentes</div>
-                        <h2>Preguntas Frequentes</h2>
-                        <p>
-                            Encontrá respuestas a las preguntas más usuales sobre nuestros servicios.
-                        </p>
+                        <h2>Contactanos</h2>
+                        <p>Estamos disponibles para responder tus preguntas y brindarte la asesoría que necesitás en el menor tiempo posible.</p>
+                        <ul id="ul-contacto-contacto">
+                            <li class="medio-de-contacto">
+                                <img src="Imagenes/Iconos/phone.svg" alt="Icono de teléfono" loading="lazy">
+                                <p>
+                                    +54 11 6110-6034
+                                </p>
+                            </li>
+                            <li class="medio-de-contacto">
+                                <img src="Imagenes/Iconos/mail.svg" alt="Icono de correo electrónico" loading="lazy">
+                                <p>
+                                    paginasestaticas@gmail.com
+                                </p>
+                            </li>
+                        </ul>
                     </div>
-                    <ul id="ul-preguntas-frequentes">
-                        <li>
-                            <h3>¿Qué es un dominio?</h3>
-                            <p>
-                                Un dominio es la dirección que los usuarios ingresan en su navegador para acceder a tu sitio web. Es como la dirección de tu emprendimiento en internet, y es esencial para que las personas puedan encontrarte en línea. Por ejemplo, "tudominio.com.ar" es un dominio.
+                    <div id="form-contacto">
+                        <h3>Envianos un mensaje</h3>
+                        <div class="text-container">
+                            <p class="alineado-izquierda">
+                                Nos encantaría saber de vos. Por favor completa el formulario a continuación y nos comunicaremos dentro de los siguientes 3 días hábiles.
                             </p>
-                        </li>
-                        <li>
-                            <h3>¿Soy dueño de mi dominio?</h3>
-                            <p>
-                                Si lo deseas podemos encargarnos de comprar y configurar el dominio el cual terminará a nombre del cliente. Una vez hecho el lanzamiento te pasamos todas las credenciales y herramientas para que después puedas gestionarlo por tu cuenta sin problemas.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>¿Qué es un Hosting?</h3>
-                            <p>
-                                El hosting es el servicio que permite almacenar todos los archivos y datos de tu sitio web en un servidor, para que esté disponible en internet. Es como el "espacio" donde vive tu página web, y es necesario para que los usuarios puedan acceder a ella en cualquier momento.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>¿Usan WordPress u otro constructor de sitios?</h3>
-                            <p>
-                                Todo lo que hacemos está hecho con código personalizado, programado a medida. Nosotros no usamos constructores de sitios ni nada por el estilo. Esto nos da la flexibilidad para diseñar algo que realmente se destaque y refleje la identidad de tu marca. La diferencia se nota en el resultado final y en cómo tu presencia online impacta después del lanzamiento.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>¿Cuánto tiempo toma diseñar y desarrollar una página estática?</h3>
-                            <p>
-                                Generalmente terminamos un sitio web de principio a fin en un plazo de 3 a 5 semanas, todo depende de cada proyecto en específico.
-                            </p>
-                        </li>
-                    </ul>
+                        </div>
+                        <form name="contacto" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                            <div class="form-div-campo">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-div-campo">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" placeholder="Tu email">
+                            </div>
+                            <div class="form-div-campo">
+                                <label for="numero-telefonico">Teléfono</label>
+                                <input type="text" name="numero-telefonico" placeholder="Tu número">
+                            </div>
+                            <div class="form-div-campo">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea name="mensaje" placeholder="Escribí tu mensaje..."></textarea>
+                            </div>
+                            <div id="recaptcha-div" data-netlify-recaptcha="true"></div>
+                            <div id="div-contact-form-boton">
+                                <button type="submit" class="call-to-action">Enviar mensaje</button>
+                            </div>
+                        </form>    
+                    </div> 
                 </div>
             </section>
         </main>
@@ -104,7 +113,7 @@
                     <div id="footer-div-top-information" class="footer-section">
                         <span class="header-footer">Información</span>
                         <ul>
-                            <li><a href="../index.html">Página principal</a></li>
+                            <li><a href="index.html">Página principal</a></li>
                             <li><a href="nosotros.html">Nosotros</a></li>
                             <li><a href="servicios.html">Servicios</a></li>
                             <li><a href="faq.html">Preguntas Frequentes</a></li>
@@ -184,6 +193,6 @@
                 <p id="footer-p-copyright">© Copyright 2025 - Designed & Developed By Páginas Estáticas</p>
             </div>
         </footer>
-        <script src="../Scripts/hamburgerMenu.js"></script>
+        <script src="Scripts/hamburgerMenu.js"></script>
     </body>
 </html>
