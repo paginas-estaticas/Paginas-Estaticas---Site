@@ -335,7 +335,7 @@ nav ul li {
 }
 
 .call-to-action-dark {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     color: var(--whiteColor);
     background-color: var(--strongColor);
 }
@@ -470,6 +470,10 @@ nav ul li {
 }
 
 .li-paquete {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
     width: 100%;
     min-height: 300px;
     margin: 0;
@@ -479,6 +483,7 @@ nav ul li {
 }
 
 .titulo-paquete {
+    margin: 0;
     font-family: var(--primaryFont);
     font-size: 1.75rem;
     font-weight: 600;
@@ -487,11 +492,12 @@ nav ul li {
 }
 
 .li-paquete ul {
-    min-height: 200px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 0.5rem;
+    margin: 0;
     padding: 1.25rem 0;
     text-align: left;
     color: var(--greyColor);
@@ -504,7 +510,13 @@ nav ul li {
     justify-content: space-between;
 }
 
+.paquete-last-item {
+    margin: 0;
+    margin-top: auto;
+}
+
 .div-paquete-precio {
+    margin: 0;
     padding-bottom: 1rem;
 }
 
@@ -521,6 +533,7 @@ nav ul li {
     font-family: var(--primaryFont);
     font-size: 2.5rem;
     font-weight: 900;
+    margin: 0;
     padding: 0.25rem 0;
 }
 
@@ -530,7 +543,7 @@ nav ul li {
 
 .li-paquete .call-to-action,
 .li-paquete .call-to-action-dark {
-    padding: 0 3.25rem;
+    padding: 1rem 3.25rem;
 }
 
 #paquete-destacado {
