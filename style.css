@@ -360,6 +360,10 @@ nav ul li {
     background-color: var(--whiteColor);
 }
 
+#portfolio-ul li .text-container p {
+    text-align: justify;
+}
+
 #section-que-hacemos {
     padding-top: 4rem;
 }
@@ -409,6 +413,10 @@ nav ul li {
 
 .action-link a:hover {
     text-decoration: none;
+}
+
+#section-que-ofrecemos p {
+    text-align: justify;
 }
 
 #section-que-ofrecemos img {
@@ -579,6 +587,11 @@ nav ul li {
     font-size: 2.5rem;
 }
 
+#section-soluciones-soluciones p {
+    text-align: justify;
+}
+
+
 #section-soluciones-soluciones section {
     padding: 0.5rem 0;
 }
@@ -586,6 +599,10 @@ nav ul li {
 #section-soluciones-soluciones img,
 #section-nosotros-nosotros img {
     margin-bottom: 1.75rem;
+}
+
+#section-nosotros-nosotros p {
+    text-align: justify;
 }
 
 #section-soluciones-soluciones ul {
@@ -611,6 +628,10 @@ nav ul li {
     border-radius: 16px;
 }
 
+#ul-preguntas-frequentes li p {
+    text-align: justify;
+}
+
 #ul-contacto-contacto {
     padding: 1.25rem 0;
 }
@@ -633,6 +654,10 @@ nav ul li {
     max-width: 1.5rem;
     height: auto;
     margin: 0;
+}
+
+#section-contacto-contacto p {
+    text-align: justify;
 }
 
 #form-contacto form {
