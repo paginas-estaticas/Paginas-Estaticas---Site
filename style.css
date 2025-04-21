@@ -365,6 +365,7 @@ nav ul li {
 }
 
 #que-hacemos-ul li {
+    max-width: 400px;
     min-height: 340px;
     margin: 4rem 0;
     padding: 1.5rem;
@@ -852,8 +853,11 @@ footer hr {
         justify-content: left;
     }
 
-    #section-que-hacemos .common-padding div:first-child {
+    #section-que-hacemos .common-padding {
         text-align: center;
+    }
+
+    #section-que-hacemos .common-padding div:first-child {
         width: 50%;
     }
 
@@ -862,6 +866,21 @@ footer hr {
         flex-direction: row;
         align-items: flex-start;
         gap: 1.25rem;
+    }
+
+    #que-hacemos-ul li {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .svg-container {
+        margin-left: 0;
+    }
+
+    #que-hacemos-ul li .action-link {
+        margin: 0;
+        margin-top: auto;
     }
 
     #section-que-hacemos .common-padding div:nth-child(3) {
