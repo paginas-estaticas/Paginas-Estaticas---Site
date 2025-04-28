@@ -17,6 +17,10 @@
     src: url("Fuentes/Oswald/Oswald-VariableFont_wght.ttf") format(truetype);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -55,6 +59,7 @@ body {
     font-size: var(--bodyFontSize);
     color: var(--greyColor);
     background-color: var(--strongColor);
+    text-align: center;
 }
 
 .common-padding {
@@ -74,8 +79,8 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
 }
 
 .small-title {
@@ -88,7 +93,7 @@ h2 {
 
 .small-title + h2, 
 .small-title + h3 {
-    margin-top: 0rem;
+    margin-top: 0.5rem;
 }
 
 .alineado-izquierda {
@@ -278,7 +283,10 @@ nav ul li {
 #section-statement {
     text-align: center;
     color: var(--whiteColor);
-    background-color: var(--strongColor);
+    background-image: url(Imagenes/bg-skycrapers.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #section-statement .common-padding {
@@ -293,13 +301,15 @@ nav ul li {
 }
 
 #section-statement h1 {
-    font-size: 2.375rem;
-    line-height: 3rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
     margin: 0.75rem 0 1rem;
 }
 
 #section-statement p {
     color: var(--whiteColor);
+    width: 90%;
+    margin: 1rem auto;
 }
 
 .div-double-button-container {
@@ -358,44 +368,64 @@ nav ul li {
 #section-portafolio, #section-paquetes {
     color: var(--blackColor);
     background-color: var(--whiteColor);
+    padding: 4rem 0;
 }
 
 #section-que-hacemos {
-    padding-top: 4rem;
+    padding: 4rem 0;
+    background: #000000;
+    background: linear-gradient(318deg, rgba(0, 0, 0, 1) 0%, rgba(15, 31, 66, 1) 47%, rgba(0, 0, 0, 1) 100%);
+}
+
+#que-hacemos-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontal centering */
+    align-items: center;
+    gap: 4rem;
+    margin: 4rem 0;
 }
 
 #que-hacemos-ul li {
+    width: 90%;
     max-width: 400px;
-    min-height: 340px;
-    margin: 4rem 0;
-    padding: 1.5rem;
+    min-height: 280px;
+    padding: 3rem 2rem;
     background-color: var(--lightGreyColor);
     border-radius: 16px;
 }
 
+#section-que-hacemos h2, #section-que-hacemos p,
+#section-que-hacemos .small-title {
+    color: white;
+}
+
+#que-hacemos-ul h3 {
+    font-size: 2rem;
+    color: var(--blackColor);
+}
+
+#que-hacemos-ul p {
+    color: var(--greyColor);
+}
+
 .svg-container {
-    position: relative;
-    bottom: 3rem;
     display: inline-flex;
     justify-content: center; 
     align-items: center;
-    background-color: var(--strongColor);
+    background-color: var(--secondaryColor);
     padding: 1rem;
     border-radius: 12px;
 }
 
-#que-hacemos-ul li .text-container {
-    margin-top: -32px;
-}
-
 #que-hacemos-ul li svg {
-    height: 2.5rem;
+    height: 3.5rem;
     width: auto;
 }
 
 #que-hacemos-ul li svg path {
     margin: 0 auto;
-    fill: var(--whiteColor);
+    fill: var(--blackColor);
 }
 
 .action-link {
@@ -417,6 +447,7 @@ nav ul li {
 
 #que-ofrecemos-ul {
     margin-bottom: 2.5rem;
+    text-align: left;
 }
 
 #que-ofrecemos-ul .title-container {
@@ -430,6 +461,7 @@ nav ul li {
 #que-ofrecemos-ul h3 {
     margin-left: 0;
     margin-right: 0;
+    font-size: 1.75rem;
 }
 
 #que-ofrecemos-ul .title-container svg {
@@ -446,11 +478,19 @@ nav ul li {
     margin-top: 0;
 }
 
+#section-portafolio {
+    background: #f4f4f4;
+}
+
 #portfolio-ul {
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
+}
+
+#portfolio-ul li {
+    width: 90%;
 }
 
 #portfolio-ul .img-container {
@@ -461,12 +501,27 @@ nav ul li {
 #portfolio-ul img {
     margin: 0 auto;
     width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px #cacaca;
+}
+
+.button-container {
+    margin-top: 2rem;
+}
+
+#section-paquetes {
+    background-color: var(--strongColor);
+} 
+
+#section-paquetes h2,
+#section-paquetes .small-title {
+    color: white;
 }
 
 .ul-paquetes {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
     padding: 2.75rem 0;
 }
 
@@ -476,7 +531,7 @@ nav ul li {
     flex-grow: 1;
     justify-content: flex-start;
     width: 100%;
-    min-height: 300px;
+    min-height: 560px;
     margin: 0;
     padding: 2.75rem;
     background-color: #f7f7f7;
@@ -543,7 +598,8 @@ nav ul li {
 }
 
 .li-paquete .call-to-action,
-.li-paquete .call-to-action-dark {
+.li-paquete .call-to-action-dark,
+#section-que-hacemos .call-to-action {
     padding: 1rem 3.25rem;
 }
 
@@ -561,7 +617,15 @@ nav ul li {
 }
 
 #section-contacto {
+    padding: 4rem 0;
     color: var(--whiteColor);
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
+}
+
+#section-contacto form {
+    width: 90%;
+    padding: 1rem 0;
 }
 
 /* ====================== */
@@ -643,6 +707,7 @@ nav ul li {
     margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: left;
 }
 
 .form-div-campo label {
@@ -657,6 +722,8 @@ nav ul li {
     width: 100%;
     height: 36px;
     margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid grey;
 }
 
 .form-div-campo textarea {
@@ -671,7 +738,7 @@ nav ul li {
     margin: 1rem auto;
 }
 
-#div-form-contacto-boton {
+form #div-form-contacto-boton {
     text-align: center;
     margin: 2rem;
 }
@@ -709,6 +776,7 @@ footer a:hover {
     gap: 1.5rem;
     justify-content: left;
     padding: 1rem 0;
+    text-align: left;
 }
 
 .footer-section {
@@ -719,6 +787,8 @@ footer a:hover {
 .header-footer {
     font-size: 1.375rem;
     line-height: 2rem;
+    font-weight: bold;
+    text-align: left;
 }
 
 footer ul li {
