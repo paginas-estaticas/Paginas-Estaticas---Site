@@ -96,6 +96,11 @@ h2 {
     margin-top: 0.5rem;
 }
 
+.text-container p {
+    width: 90%;
+    margin: 1rem auto;
+}
+
 .alineado-izquierda {
     text-align: left;
 }
@@ -258,6 +263,10 @@ nav ul li {
     cursor: pointer;
 }
 
+nav ul li.active {
+    color: var(--secondaryColor);
+}
+
 .fondo-blanco {
     background-color: var(--whiteColor);
 }
@@ -403,6 +412,7 @@ nav ul li {
 #que-hacemos-ul h3 {
     font-size: 2rem;
     color: var(--blackColor);
+    line-height: 2.5rem;
 }
 
 #que-hacemos-ul p {
@@ -518,6 +528,15 @@ nav ul li {
     color: white;
 }
 
+#section-paquetes h2 {
+    margin-top: 1.25rem;
+    font-size: 2.75rem;
+}
+
+.h3-pack-span {
+    font-size: 4rem;
+}
+
 .ul-paquetes {
     display: flex;
     flex-direction: column;
@@ -619,7 +638,7 @@ nav ul li {
 #section-contacto {
     padding: 4rem 0;
     color: var(--whiteColor);
-    background-color: var(--whiteColor);
+    background-color: whitesmoke;
     color: var(--blackColor);
 }
 
@@ -631,11 +650,12 @@ nav ul li {
 /* ====================== */
 
 .page-top-div {
-    margin: 0 auto;
-    padding: 10rem 0 3rem;
+    margin: 4.5rem 0 0;
+    padding: 3rem 1rem;
     text-align: center;
     color: var(--whiteColor);
-    background-color: var(--strongColor);
+    background: #001F3F;
+    background: linear-gradient(360deg, rgba(0, 31, 63, 1) 0%, rgba(0, 14, 31, 1) 69%, rgba(0, 11, 23, 1) 100%);
 }
 
 .page-top-div h1 {
@@ -645,6 +665,49 @@ nav ul li {
 
 #section-soluciones-soluciones section {
     padding: 0.5rem 0;
+}
+
+#section-soluciones-soluciones .div-double-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+}
+
+.span-servicio {
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 32px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px lightgray;
+}
+
+.span-servicio.active {
+    color: white;
+    background-color: var(--secondaryColor);
+}
+
+#servicio-web,
+#servicio-mkt {
+    display: none;
+}
+
+#servicio-web.visible,
+#servicio-mkt.visible {
+    display: initial;
+}
+
+#section-soluciones-soluciones h1 {
+    font-size: 3rem;
+}
+
+#section-soluciones-soluciones h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
 }
 
 #section-soluciones-soluciones img,
@@ -666,17 +729,70 @@ nav ul li {
     flex-direction: column;
     justify-content: left;
     gap: 1rem;
+    padding: 1.25rem 0;
 }
 
 #ul-preguntas-frequentes li {
     background-color: var(--lightGreyColor);
     margin: 0;
-    padding: 0.5rem 1.5rem;
     border-radius: 16px;
 }
 
+.pregunta {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+}
+
+.pregunta svg {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+.pregunta-icon-container {
+    width: 20%;
+}
+
+.pregunta svg.visible {
+    display: block;
+    height: 24px;
+    width: auto;
+    margin-left: 2rem;
+}
+
+.pregunta svg path {
+    width: 100%;
+}
+
+.pregunta h3 {
+    margin: 1rem 0 1rem 0.5rem;
+    width: 80%;
+}
+
+.respuesta {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s;
+}
+  
+.respuesta.visible {
+    padding: 0 2rem;
+    max-height: 500px; /* big enough to fit content */
+    opacity: 1;
+}
+
+.respuesta p {
+    margin-bottom: 2rem;
+}
+
 #ul-contacto-contacto {
-    padding: 1.25rem 0;
+    padding: 1.25rem 1rem;
 }
 
 .medio-de-contacto {
@@ -684,6 +800,7 @@ nav ul li {
     justify-content: left;
     align-items: center;
     gap: 1rem;
+    text-align: left;
 }
 
 #ul-contacto-contacto .medio-de-contacto p {
@@ -693,10 +810,23 @@ nav ul li {
     color: var(--blackColor);
 }
 
-.medio-de-contacto img {
-    max-width: 1.5rem;
+#ul-contacto-contacto .medio-de-contacto svg {
+    width: 2rem;
     height: auto;
     margin: 0;
+}
+
+#ul-contacto-contacto .medio-de-contacto svg path {
+    fill: black;
+}
+
+#form-contacto h3 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+}
+
+#form-contacto p {
+    text-align: center;
 }
 
 #form-contacto form {
@@ -704,34 +834,41 @@ nav ul li {
 }
 
 .form-div-campo {
-    margin: 1rem 0;
+    margin: 2rem 0;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: left;
 }
 
 .form-div-campo label {
-    font-size: var(--bodyFontSize);
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
     text-align: left;
+    padding-left: 1rem;
 }
 
 .form-div-campo input {
     font-family: var(--bodyFontSize);
-    font-size: var(--bodyFontSize);
+    font-size: 1.25rem;
     width: 100%;
-    height: 36px;
+    height: 56px;
     margin-top: 0.5rem;
+    padding-left: 1rem;
     border-radius: 4px;
-    border: 1px solid grey;
+    border: 0;
+    box-shadow: 0 4px 8px lightgray;
 }
 
 .form-div-campo textarea {
     font-family: var(--bodyFontSize);
-    font-size: var(--bodyFontSize);
+    font-size: 1.25rem;
     width: 100%;
     height: 24vh;
     margin-top: 0.5rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    border: 0;
+    box-shadow: 0 4px 8px lightgray;
 }
 
 #recaptcha-div {
@@ -741,6 +878,43 @@ nav ul li {
 form #div-form-contacto-boton {
     text-align: center;
     margin: 2rem;
+}
+
+#section-contacto .button-container {
+    background: #00ff48;
+    background: linear-gradient(149deg, rgb(0, 255, 72) 0%, rgb(0, 216, 95) 100%);
+    border-radius: 16px;
+}
+
+#section-contacto h3 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.contacto-via-wsp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    height: 5rem;
+}
+
+.contacto-via-wsp svg {
+    margin: 0;
+    width: 2.5rem;
+}
+
+.contacto-via-wsp svg path {
+    fill: white;
+}
+
+.contacto-via-wsp p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
 }
 
 footer {
@@ -798,7 +972,9 @@ footer ul li {
 
 footer svg {
     margin: 0;
-    color: white;
+}
+
+footer svg path {
     fill: white;
 }
 
@@ -870,6 +1046,7 @@ footer hr {
     #main-index h2 {
         font-size: 3rem;
         line-height: 3.75rem;
+        max-width: 20ch;
     }
 
     h2 {
@@ -881,8 +1058,14 @@ footer hr {
         font-size: 1.5rem;
     }
 
+
+
     section {
         padding: 3.5rem 0;
+    }
+
+    * {
+        text-align: center;
     }
 
     .call-to-action {
@@ -897,22 +1080,21 @@ footer hr {
         flex-direction: row;
         align-items: center;
         gap: 8rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
     }
 
     #section-statement h1 {
-        font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-        line-height: 4.25rem;
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        max-width: 20ch;
+        margin: 1rem auto;
     }
 
     #section-statement p {
         font-size: clamp(1rem, 1.5vw, 1.25rem);
         line-height: 1.75rem;
-    }
-
-    #section-statement .text-container {
-        text-align: left;
+        max-width: 60ch;
     }
 
     #responsive-design-image-top {
@@ -920,7 +1102,7 @@ footer hr {
     }
 
     .div-double-button-container {
-        justify-content: left;
+        justify-content: center;
     }
 
     #section-que-hacemos .common-padding {
@@ -942,10 +1124,15 @@ footer hr {
         text-align: left;
         display: flex;
         flex-direction: column;
+        min-height: 430px;
+    }
+
+    #que-hacemos-ul li:last-child .text-container h3 {
+        max-width: 10ch;
     }
 
     .svg-container {
-        margin-left: 0;
+        margin: 0 auto;
     }
 
     #que-hacemos-ul li .action-link {
@@ -957,15 +1144,16 @@ footer hr {
         text-align: center;
     }
 
-    #section-que-ofrecemos .common-padding {
-        display: flex;
-        flex-direction: row;
-        gap: 4rem;
-        text-align: left;
+    #que-hacemos-ul p {
+        max-width: 100%;
     }
 
-    #section-que-ofrecemos img {
-        display: block;
+    #section-que-ofrecemos .text-container {
+        width: 80%;
+    }
+
+    #section-que-ofrecemos p {
+        max-width: 70ch;
     }
 
     #section-portafolio {
@@ -1029,21 +1217,32 @@ footer hr {
 
     #section-paquetes h2 {
         max-width: 32ch;
-        margin: 0;
+        margin-top: 1.25rem;
+    }
+
+    .h3-pack-span {
+        font-size: 4.5rem;
     }
 
     .ul-paquetes {
         flex-direction: row;
         justify-content: center;
-        gap: 6rem;
+        gap: 3rem;
     }
 
     .li-paquete {
-        width: 33%;
+        max-width: 30%;
+    }
+
+    .li-paquete ul li {
+        text-align: left;
     }
 
     .titulo-paquete {
         font-size: 2.125rem;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 1rem;
     }
 
     .paquete-precio {
@@ -1051,15 +1250,20 @@ footer hr {
     }
 
     #section-contacto .common-padding {
-        max-width: 60%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        max-width: 70%;
     }
 
-    #section-contacto h2 {
-        padding-right: 3.25rem;
+    #section-contacto .button-container {
+        width: 24rem;
+    }
+
+    .contacto-via-wsp {
+        margin: 0 auto;
+    }
+
+    form input,
+    form textarea {
+        text-align: left;
     }
 
     .page-top-div h1 {
@@ -1117,7 +1321,11 @@ footer hr {
     }
 
     #section-contacto hr {
-        display: none;
+        width: 50%;
+        color: var(--strongColor);
+        height: 4px;
+        background-color: var(--strongColor);
+        margin: 2rem auto;
     }
 
     #form-contacto {
@@ -1129,6 +1337,11 @@ footer hr {
 
     #recaptcha-div {
         margin: 1rem 0;
+    }
+
+    #section-contacto h3 {
+        font-size: 2.5rem;
+        max-width: 30ch;
     }
 
     footer {
@@ -1154,6 +1367,10 @@ footer hr {
     #footer-div-top-logo {
         width: 248px;
         padding-top: 0;
+    }
+
+    footer ul li {
+        text-align: left;
     }
 
     #footer-p-copyright {
