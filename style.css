@@ -263,8 +263,9 @@ nav ul li {
     cursor: pointer;
 }
 
-nav ul li.active {
+nav ul li a.active {
     color: var(--secondaryColor);
+    transition: color 0.3s ease;
 }
 
 .fondo-blanco {
@@ -377,11 +378,11 @@ nav ul li.active {
 #section-portafolio, #section-paquetes {
     color: var(--blackColor);
     background-color: var(--whiteColor);
-    padding: 4rem 0;
+    padding: 6rem 0 4rem;
 }
 
 #section-que-hacemos {
-    padding: 4rem 0;
+    padding: 6rem 0 4rem;
     background: #000000;
     background: linear-gradient(318deg, rgba(0, 0, 0, 1) 0%, rgba(15, 31, 66, 1) 47%, rgba(0, 0, 0, 1) 100%);
 }
@@ -391,7 +392,7 @@ nav ul li.active {
     flex-direction: column;
     justify-content: center; /* horizontal centering */
     align-items: center;
-    gap: 4rem;
+    gap: 1rem;
     margin: 4rem 0;
 }
 
@@ -451,6 +452,10 @@ nav ul li.active {
     text-decoration: none;
 }
 
+#section-que-ofrecemos {
+    padding: 6rem 0 4rem;
+}
+
 #section-que-ofrecemos img {
     display: none;
 }
@@ -490,6 +495,7 @@ nav ul li.active {
 
 #section-portafolio {
     background: #f4f4f4;
+    padding-bottom: 2rem;
 }
 
 #portfolio-ul {
@@ -520,7 +526,8 @@ nav ul li.active {
 }
 
 #section-paquetes {
-    background-color: var(--strongColor);
+    background: #000000;
+background: linear-gradient(195deg, rgba(0, 0, 0, 1) 0%, rgba(0, 31, 63, 1) 31%, rgba(20, 43, 82, 1) 47%, rgba(0, 22, 61, 1) 61%, rgba(0, 0, 0, 1) 100%);
 } 
 
 #section-paquetes h2,
@@ -540,7 +547,7 @@ nav ul li.active {
 .ul-paquetes {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 1rem;
     padding: 2.75rem 0;
 }
 
@@ -635,8 +642,52 @@ nav ul li.active {
     color: var(--whiteColor);
 }
 
+#section-beneficios {
+    background-color: white;
+    color: var(--blackColor);
+    padding: 4rem 0 2rem;
+}
+
+#section-beneficios ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.li-beneficio {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.li-beneficio .svg-container {
+    background-color: white;
+}
+
+.li-beneficio .svg-container svg {
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+}
+
+.li-beneficio .svg-container path {
+    color: var(--secondaryColor);
+}
+
+.li-beneficio h3 {
+    margin: 0.75rem 0 0;
+}
+
+.li-beneficio p {
+    margin: 0;
+}
+
 #section-contacto {
-    padding: 4rem 0;
+    padding: 6rem 0 4rem;
     color: var(--whiteColor);
     background-color: whitesmoke;
     color: var(--blackColor);
@@ -881,8 +932,8 @@ form #div-form-contacto-boton {
 }
 
 #section-contacto .button-container {
-    background: #00ff48;
-    background: linear-gradient(149deg, rgb(0, 255, 72) 0%, rgb(0, 216, 95) 100%);
+    background: #00ad14;
+    background: linear-gradient(270deg, rgba(0, 173, 20, 1) 0%, rgba(32, 186, 42, 1) 100%);
     border-radius: 16px;
 }
 
@@ -918,7 +969,9 @@ form #div-form-contacto-boton {
 }
 
 footer {
-    padding-top: 2rem;
+    padding: 2rem 0;
+    background: #001F3F;
+background: linear-gradient(180deg, rgba(0, 31, 63, 1) 29%, rgba(5, 25, 56, 1) 64%, rgba(0, 20, 41, 1) 100%);
 }
 
 footer, footer p {
@@ -994,6 +1047,35 @@ footer hr {
     max-width: none;
     text-align: center;
     padding: 1.5rem 0 0;
+    margin: 0;
+}
+
+.wsp-flotante {
+    width: 82px;
+    height: 82px;
+    cursor: pointer;
+    border-radius: 60px;
+    border: none;
+    background-color: #25D366;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    translate: -30% 0;
+    z-index: 10000;
+    display: grid;
+    place-content: center;
+    transition: all 0.3s;
+    padding: 0.75rem;
+    box-shadow: 0px 0px 6px rgb(99, 99, 99);
+}
+
+.wsp-flotante svg {
+    width: 100%;
+    height: auto;
+}
+
+.wsp-flotante svg path {
+    fill: var(--whiteColor);
 }
 
 @media (min-width: 992px) {
@@ -1103,6 +1185,14 @@ footer hr {
 
     .div-double-button-container {
         justify-content: center;
+    }
+
+    #section-que-hacemos, #section-que-ofrecemos, #section-portafolio, #section-paquetes {
+        padding: 7rem 0 4rem;
+    }
+
+    #section-que-ofrecemos {
+        padding-bottom: 6rem;
     }
 
     #section-que-hacemos .common-padding {
@@ -1249,6 +1339,34 @@ footer hr {
         font-size: 2.75rem;
     }
 
+    #section-beneficios {
+        padding: 6rem 0;
+    }
+
+    #section-beneficios ul {
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .li-beneficio {
+        flex-direction: column;
+        gap: 0;
+        width: 20%;
+    }
+
+    .li-beneficio .svg-container svg {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .li-beneficio h3 {
+        margin: 0 0 1rem;
+    }
+
+    .li-beneficio p {
+        margin: 0 auto;
+    }
+
     #section-contacto .common-padding {
         max-width: 70%;
     }
@@ -1346,6 +1464,7 @@ footer hr {
 
     footer {
         padding-top: 4rem;
+        padding-bottom: 1rem;
     }
 
     #footer-div-top {
