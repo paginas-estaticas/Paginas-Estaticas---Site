@@ -136,21 +136,7 @@ header {
     align-content: center;
 }
 
-header::before {
-    content: "";
-    width: 100%;
-    position: absolute;
-    height: 0vh;
-    background-color: #00000099;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    top: 0;
-    right: 0;
-    z-index: -11;
-    transform: height 0.3s, opacity 0.3s;
-    transition: opacity 0.3s ease-in-out;
-}
+
 
 header.active::before {
     height: 150vh;
@@ -250,7 +236,8 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    padding: 12vh 0;
+    padding: 8vh 0 2rem;
+    width: 100%;
 }
 
 nav ul li {
@@ -261,6 +248,7 @@ nav ul li {
     color: var(--strongColor);
     list-style-type: none;
     cursor: pointer;
+    margin: 0;
 }
 
 nav ul li a.active {
@@ -293,8 +281,9 @@ nav ul li a.active {
 #section-statement {
     text-align: center;
     color: var(--whiteColor);
-    background-image: url(Imagenes/bg-skycrapers.webp);
+    background-image: url(Imagenes/space.webp);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -306,20 +295,75 @@ nav ul li a.active {
     padding: 4rem 4% 4rem;
 }
 
+#section-statement .text-container {
+    min-height: 340px;
+}
+
 #section-statement .small-title {
     color: var(--whiteColor);
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+.h1-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #section-statement h1 {
+    font-size: 5.5rem;
+    line-height: 5.25rem;
+    margin: 0.75rem 0 1rem;
+    text-shadow: 0 0 16px black;
+    opacity: 0;
+    position: absolute;
+}
+
+#section-statement #final-h1 {
     font-size: 3.5rem;
     line-height: 4rem;
-    margin: 0.75rem 0 1rem;
+    scale: 0.5;
+    opacity: 0;
+    position: inherit;
+    transition: all 0.75s ease-in-out;
+}
+
+#section-statement #final-h1.visible {
+    opacity: 1;
+    scale: 1;
+}
+
+#first-h1, #second-h1,
+#third-h1, #final-h1 {
+    font-size: 5rem;
+    scale: 0.5;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+#first-h1.visible, #second-h1.visible,
+#third-h1.visible, #final-h1.visible {
+    scale: 1;
+    opacity: 1;
+}
+
+#final-h1 {
+    position: initial;
 }
 
 #section-statement p {
     color: var(--whiteColor);
     width: 90%;
-    margin: 1rem auto;
+    margin: 0 auto 1rem;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+#section-statement p.visible,
+#section-statement .small-title.visible {
+    opacity: 1;
 }
 
 .div-double-button-container {
@@ -330,6 +374,22 @@ nav ul li a.active {
 
 #section-statement .div-double-button-container {
     padding-top: 2rem;
+    position: relative;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
+}
+
+.fade-in-element {
+    transform: translateY(25%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.fade-in-element.visible, 
+#section-statement .div-double-button-container.visible {
+    transform: translateY(0%);
+    opacity: 1;
 }
 
 .call-to-action, .call-to-action-dark, 
@@ -514,11 +574,20 @@ nav ul li a.active {
     text-align: center;
 }
 
-#portfolio-ul img {
+.portfolio-img {
     margin: 0 auto;
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 16px #cacaca;
+    position: relative;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transition: all 1s ease-in-out;
+}
+
+.portfolio-img.visible {
+    opacity: 1;
+    transform: rotateX(0deg);
 }
 
 .button-container {
@@ -527,8 +596,42 @@ nav ul li a.active {
 
 #section-paquetes {
     background: #000000;
-background: linear-gradient(195deg, rgba(0, 0, 0, 1) 0%, rgba(0, 31, 63, 1) 31%, rgba(20, 43, 82, 1) 47%, rgba(0, 22, 61, 1) 61%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(195deg, rgba(0, 0, 0, 1) 0%, rgba(0, 31, 63, 1) 31%, rgba(20, 43, 82, 1) 47%, rgba(0, 22, 61, 1) 61%, rgba(0, 0, 0, 1) 100%);
 } 
+
+.animated-span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: var(--whiteColor);
+    opacity: 0; /* Initially invisible */
+    padding: 0.5rem 1rem 1rem;
+    z-index: 10;
+    transition: opacity 0.5s ease, transform 1s ease; /* Transition for opacity and sliding */
+}
+
+.animated-span.visible {
+    opacity: 1; /* Make it visible */
+}
+
+.animated-span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-color: var(--secondaryColor); /* Background color */
+    transform: scaleX(0); /* Start with the background invisible */
+    transform-origin: left; /* Animate from the left */
+    transition: transform 0.5s ease-out; /* Animate the background color */
+}
+  
+.animated-span.visible::before {
+    transform: scaleX(1); /* Expand the background to fill the element */
+}
 
 #section-paquetes h2,
 #section-paquetes .small-title {
@@ -544,7 +647,7 @@ background: linear-gradient(195deg, rgba(0, 0, 0, 1) 0%, rgba(0, 31, 63, 1) 31%,
     font-size: 4rem;
 }
 
-.ul-paquetes {
+#ul-paquetes {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -602,11 +705,11 @@ background: linear-gradient(195deg, rgba(0, 0, 0, 1) 0%, rgba(0, 31, 63, 1) 31%,
     padding-bottom: 1rem;
 }
 
-.ul-paquetes svg {
+#ul-paquetes svg {
     margin: 0;
 }
 
-.ul-paquetes svg path {
+#ul-paquetes svg path {
     fill: var(--secondaryColor);
 }
 
@@ -971,7 +1074,7 @@ form #div-form-contacto-boton {
 footer {
     padding: 2rem 0;
     background: #001F3F;
-background: linear-gradient(180deg, rgba(0, 31, 63, 1) 29%, rgba(5, 25, 56, 1) 64%, rgba(0, 20, 41, 1) 100%);
+    background: linear-gradient(180deg, rgba(0, 31, 63, 1) 29%, rgba(5, 25, 56, 1) 64%, rgba(0, 20, 41, 1) 100%);
 }
 
 footer, footer p {
@@ -1112,6 +1215,7 @@ footer hr {
 
     nav ul {
         flex-direction: row;
+        justify-content: space-between;
         margin: 0;
         padding: 0;
     }
@@ -1166,10 +1270,10 @@ footer hr {
         padding-bottom: 8rem;
     }
 
-    #section-statement h1 {
-        font-size: 4.5rem;
-        line-height: 4.5rem;
-        max-width: 20ch;
+    #section-statement h1, #section-statement #final-h1 {
+        font-size: 6rem;
+        line-height: 6.5rem;
+        max-width: 15ch;
         margin: 1rem auto;
     }
 
@@ -1293,16 +1397,20 @@ footer hr {
         width: 400px;
     }
 
-    #portfolio-ul li {
+    .portfolio-img {
         transition: transform 0.3s ease-in-out;
     }
 
-    #portfolio-ul li:hover {
+    .portfolio-img:hover {
         transform: scale(1.02);
     }
 
     #portfolio-ul li .text-container {
         min-height: 210px;
+    }
+
+    .animated-span {
+        top: 0.7rem;
     }
 
     #section-paquetes h2 {
@@ -1314,7 +1422,7 @@ footer hr {
         font-size: 4.5rem;
     }
 
-    .ul-paquetes {
+    #ul-paquetes {
         flex-direction: row;
         justify-content: center;
         gap: 3rem;
