@@ -62,8 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Apply the delayed visibility to elements inside both #que-hacemos-ul and #portfolio-ul
+    delayElementVisibility("section-que-ofrecemos");
     delayElementVisibility("que-hacemos-ul");
     delayElementVisibility("portfolio-ul");
     delayElementVisibility("ul-paquetes");
+    delayElementVisibility("section-beneficios");
   }
 });

@@ -626,7 +626,7 @@ nav ul li a.active {
     background-color: var(--secondaryColor); /* Background color */
     transform: scaleX(0); /* Start with the background invisible */
     transform-origin: left; /* Animate from the left */
-    transition: transform 0.5s ease-out; /* Animate the background color */
+    transition: transform 0.5s ease-out 0.5s; /* Animate the background color */
 }
   
 .animated-span.visible::before {
@@ -1266,8 +1266,7 @@ footer hr {
         flex-direction: row;
         align-items: center;
         gap: 8rem;
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        padding: 6rem 0;
     }
 
     #section-statement h1, #section-statement #final-h1 {
@@ -1411,6 +1410,11 @@ footer hr {
 
     .animated-span {
         top: 0.7rem;
+    }
+
+    .animated-span::before {
+
+    transition: transform 0.5s ease-out 0.5s; /* Animate the background color */
     }
 
     #section-paquetes h2 {
